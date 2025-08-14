@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting...</title>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #060B1A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    
+    .logo {
+      width: 64px;
+      height: 64px;
+    }
+    
+    @media (max-width: 768px) {
+      .logo {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  </style>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+    
+    gtag('event', 'qr_scan', {
+      'event_category': 'engagement',
+      'event_label': 'qr_redirect',
+      'destination': 'https://xsolla.com/backpack'
+    });
+    
+    setTimeout(function() {
+      window.location.replace('https://xsolla.com/backpack');
+    }, 500);
+  </script>
+</head>
+<body>
+  <img src="Logo.svg" alt="Logo" class="logo">
+</body>
+</html>
